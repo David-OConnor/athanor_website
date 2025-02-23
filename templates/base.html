@@ -1,0 +1,94 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <script type="module">
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script>
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+{#    Note: Some pages overwrite this description. #}
+    <meta name="description" content="Sensors and measurement for science, hydroponics, and aquariums">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:url" content="https://www.anyleaf.org">
+
+    {# SVG favicons appear to only be supported in Firefox? #}
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.png' %}"/>
+
+    {#    <link rel="icon" href="/favicon.ico">#}
+    {#    <link rel="icon" href="/favicon.svg" type="image/svg+xml">#}
+    <link rel="apple-touch-icon" href="{% static 'favicon.png' %}">
+    {#    <link rel="manifest" href="/my.webmanifest">#}
+    <meta name="theme-color" content="#a2c8a9">
+
+    {%  block head_contents %} {% endblock %}
+
+
+</head>
+<body>
+
+<div id="top-bar">
+    <div id="menu">
+        <a href="/"><img src="/static/logo.png" style= "margin-left: 40px; margin-top: 8px; margin-right: 60px;" height="42px" alt="AnyLeaf" /></a>
+
+        <a class="menu-item" id="menu-home" href="/"><h3 class="menu-header">Home</h3></a>
+        <a class="menu-item" id="menu-products-uav" href="/products-uav"><h3 class="menu-header">UAV products</h3></a>
+        <a class="menu-item" id="menu-products-water" href="/products-water"><h3 class="menu-header">Water products</h3></a>
+        <a class="menu-item" id="menu-about" href="/about"><h3 class="menu-header">About</h3></a>
+        <a class="menu-item" id="menu-checkout" href="/checkout"><h3 class="menu-header">Checkout</h3></a>
+        <a class="menu-item" id="menu-articles" href="/blog"><h3 class="menu-header">Articles</h3></a>
+        <a class="menu-item" id="menu-contact" href="mailto:anyleaf@anyleaf.org"><h3 class="menu-header">Contact</h3></a>
+    </div>
+</div>
+{##}
+{#<div id="top-bar">#}
+{#    <div id="menu">#}
+{#        <a href="/" class="menu-item"><h3 class="menu-header">Home</h3></a>#}
+{#        <a href="/mercury-g4" class="menu-item"><h3 class="menu-header">G4 Quad FC</h3></a>#}
+{#        <a href="/elrs-rx-dualradio" class="menu-item"><h3 class="menu-header">ELRS dual-radio Rx</h3></a>#}
+{#        <a href="/elrs-rx" class="menu-item"><h3 class="menu-header">ELRS Rx</h3></a>#}
+{#        <a href="/mercury-h7" class="menu-item"><h3 class="menu-header">H7 Quad FC</h3></a>#}
+{#        <a href="/stove-thermometer" class="menu-item"><h3 class="menu-header">Stove Thermometer</h3></a>#}
+{#        <a href="/water-monitor" class="menu-item"><h3 class="menu-header">Water Monitor</h3></a>#}
+{#        <a href="/ph-module" class="menu-item"><h3 class="menu-header">pH</h3></a>#}
+{#        <a href="/sensor-interface" class="menu-item"><h3 class="menu-header">Water sensors</h3></a>#}
+{#        <a href="/temp-module" class="menu-item"><h3 class="menu-header">Temperature</h3></a>#}
+{#        <a class="menu-item" href="/about"><h3 class="menu-header">About</h3></a>#}
+{#        <a class="menu-item" href="/checkout"><h3 class="menu-header">Checkout</h3></a>#}
+{#        <a class="menu-item" href="/blog"><h3 class="menu-header">Blog</h3></a>#}
+{#        <a class="menu-item" href="mailto:anyleaf@anyleaf.org"><h3 class="menu-header">Contact</h3></a>#}
+{#    </div>#}
+{#</div>#}
+
+
+{% block contents %}{% endblock %}
+
+<div id="footer">
+    <h4 style="margin-top: 30px">Designed and assembled in Raleigh, NC, USA.</h4>
+    <div style="margin-bottom: 30px">
+        <a class="fineprint" style="margin-right: 20px" href="/privacy">Privacy policy</a>
+        <a class=fineprint href="/terms">Terms and conditions</a>
+    </div>
+    <div style="display: flex; flex-direction: column">
+        <h5 class="fineprint">
+            All AnyLeaf products comply with the
+            <a href="https://en.wikipedia.org/wiki/Restriction_of_Hazardous_Substances_Directive">
+                Restriction of Hazardous Substances (RoHS) Directive</a>.</h5>
+        <h5 class="fineprint">© 2023 AnyLeaf</h5>
+    </div>
+</div>
+
+{# Load these scripts after rendering the HTML content. #}
+<script src="{% static 'js/main.js' %}"></script>
+<script src="{% static 'js/cart.js' %}"></script>
+
+</body>
+</html>
