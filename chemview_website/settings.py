@@ -22,14 +22,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DEPLOYED = True if "DATABASE_URL" in os.environ else False
 
 if DEPLOYED:
-    DEBUG = False
+    # todo temp
+    DEBUG = True
+    # DEBUG = False
     SECRET_KEY = os.environ["SECRET_KEY"]
 
     SENDGRID_KEY = os.getenv("SENDGRID_KEY")
 else:
-    # todo temp
     DEBUG = True
-    # DEBUG = True
     SECRET_KEY = "django-insecure-gptf$(%qck$ochb-fpm)*+&dq$7t0$f_r!_d%q0)+k@svh17&i"
 
     try:
