@@ -22,13 +22,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DEPLOYED = True if "DATABASE_URL" in os.environ else False
 
 if DEPLOYED:
-    # SECURITY WARNING: don't run with debug turned on in production!
     DEBUG = False
-    # SECURITY WARNING: keep the secret key used in production secret!
     SECRET_KEY = os.environ["SECRET_KEY"]
+
+    SENDGRID_KEY = os.getenv("SENDGRID_KEY")
 else:
     DEBUG = True
     SECRET_KEY = "django-insecure-gptf$(%qck$ochb-fpm)*+&dq$7t0$f_r!_d%q0)+k@svh17&i"
+
     try:
         from .private import SENDGRID_KEY
     # Allow an escape hatch so the problem runs and can be tested with a quick
@@ -40,9 +41,9 @@ else:
 ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
-    "chemview.herokuapp.com",
-    "chemview.org",
-    "www.chemview.org",
+    "athanor.herokuapp.com",
+    "athanorlab.com",
+    "www.athanorlab.com",
 ]
 
 
@@ -93,7 +94,8 @@ WSGI_APPLICATION = "chemview_website.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-LOCAL_DB = "postgres://postgres:test@localhost:5432/chemview"
+# LOCAL_DB = "postgres://postgres:test@localhost:5432/chemview"
+LOCAL_DB = "sqlite:///chemview.db"
 DATABASES = {"default": dj_database_url.config(default=LOCAL_DB)}
 
 
@@ -152,7 +154,7 @@ if DEPLOYED:
 #
 # EMAIL_HOST = "smtp.sendgrid.net"
 # EMAIL_HOST_USER = "apikey"
-# EMAIL_HOST_PASSWORD = os.environ["SENDGRID_KEY"] if DEPLOYED else SENDGRID_KEY
+# EMAIL_HOST_PASSWORD = SENDGRID_KEY
 # EMAIL_PORT = 587
 # EMAIL_USE_TLS = True
 

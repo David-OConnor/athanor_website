@@ -1,13 +1,33 @@
-{% extends 'base_dark.html' %}
+{% extends 'base.html' %}
 {% load static %}
 
 {% block head_contents %}
-    <title>AnyLeaf sensors</title>
+    <title>Athanor</title>
 {% endblock %}
 
 
 
 {% block contents %}
+<div class="home-body">
+    <h2>Zosimos</h2>
+    <p>
+        View proteins and other molecules of interest in 3D, with an easy-to-use interface, and fast performance.
+        Sophisticated molecular docking capabilities.
+    </p>
+
+    <h3>Download</h3>
+    <h3><a href="download_link_win.zip">Windows</a></h3>
+    <h3><a href="download_link_mac.zip">Mac</a></h3>
+    <h3><a href="download_link_linuix.zip">Linux</a></h3>
+
+    <h2>PlasCAD</h2>
+    <p>
+        View and edit plasmids for molecular bio workflow.
+        <a href="https://github.com/David-OConnor/plascad">source code</a> is available with an MIT license.
+    </p>
+
+    <h3>Download</h3>
+    <a href="https://github.com/David-OConnor/plascad/releases">From Github</a>
 
     {#    <div style="text-align: center">#}
     {#        <img src="{%  static 'logo.png' %}" style = "margin-top: 60px" width=300 alt="AnyLeaf" />#}
@@ -15,15 +35,15 @@
     {#    </div>#}
 
 {#    ideal alt text: "NASA, Public domain, via Wikimedia Commons", but this is not possible on a bg image. #}
-    <div style="background-image: url('/static/images/aurora.jpg');
-    background-size: cover;
-     height: 420px;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-">
-        <h1 style="font-size: 3em;">Cutting-edge SUAS hardware</h1>
-    </div>
+{#    <div style="background-image: url('/static/images/aurora.jpg');#}
+{#    background-size: cover;#}
+{#     height: 420px;#}
+{#     display: flex;#}
+{#     justify-content: center;#}
+{#     align-items: center;#}
+{#">#}
+{#        <h1 style="font-size: 3em;">Chemistry and molecular biology software</h1>#}
+{#    </div>#}
 
     {#    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin-bottom: 100px;">#}
     {#        <h1>Reliable devices that are easy to use</h1>#}
@@ -31,53 +51,26 @@
     {#        <p>Our tightly-integrated hardware and software are reliable and intuitive.</p>#}
     {#    </div>#}
 
-    <div class="products-item">
-        <div class="products-description">
-            <h2 style="margin-bottom: 46px;">Reliable devices that are easy to use</h2>
-            <p>
-                Our tightly-integrated hardware and software solutions are reliable and intuitive.
-            </p>
-
-            <a href="/products-uav">
-                <div class="products-button">
-                    <h2>Products</h2>
-                </div>
-            </a>
-        </div>
-
-        <a href="/products-uav"><img src="{% static '/images/g4_fc_bottom_angled.jpg' %}" width="400px" alt="Mercury G4 Quadcopter flight controller" /></a>
-    </div>
-
-    <div class="products-item">
-        <div class="products-description">
-            <h2 style="margin-bottom: 46px;">Meerkat: Upcoming Counter-UAS (C-UAS) system</h2>
-            <p>
-                Fuses optical detection, high-fidelity camera tracking, RF detection, and electronic attack
-            </p>
-
-            <a href="/meerkat">
-                <div class="products-button">
-                    <h2>Details</h2>
-                </div>
-            </a>
-        </div>
+{#    <div class="products-item">#}
+{#        <div class="products-description">#}
+{#            <h2 style="margin-bottom: 46px;">Reliable devices that are easy to use</h2>#}
+{#            <p>#}
+{#                Our tightly-integrated hardware and software solutions are reliable and intuitive.#}
+{#            </p>#}
+{##}
+{#            <a href="/products-uav">#}
+{#                <div class="products-button">#}
+{#                    <h2>Products</h2>#}
+{#                </div>#}
+{#            </a>#}
+{#        </div>#}
+{##}
+{#        <a href="/products-uav"><img src="{% static '/images/g4_fc_bottom_angled.jpg' %}" width="400px" alt="Mercury G4 Quadcopter flight controller" /></a>#}
+{#    </div>#}
 
 {#        <a href="/products-uav"><img src="{% static '/images/g4_fc_bottom_angled.jpg' %}" width="400px" alt="Mercury G4 Quadcopter flight controller" /></a>#}
     </div>
 
-    <div class="products-item">
-        <div class="products-description">
-            <h2 style="margin-bottom: 46px;">Engineered in the USA</h2>
-            <p>
-                Our North Carolina-based design team brings together a broad background
-                of hardware and software experience, including architecting mission-critical DoD applications.
-                We are a veteran-owned business.
-            </p>
-
-        </div>
-
-     <a href="/products-uav"><img src="{% static '/images/quad_mountains.jpg' %}" width="400px" alt="Anyleaf example" /></a>
-    </div>
 
     <script>
         document.getElementById("menu-home").style.color = "#F6F7EB"
