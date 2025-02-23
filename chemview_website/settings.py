@@ -28,6 +28,7 @@ if DEPLOYED:
     SENDGRID_KEY = os.getenv("SENDGRID_KEY")
 else:
     # todo temp
+    DEBUG = True
     # DEBUG = True
     SECRET_KEY = "django-insecure-gptf$(%qck$ochb-fpm)*+&dq$7t0$f_r!_d%q0)+k@svh17&i"
 
