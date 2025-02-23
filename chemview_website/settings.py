@@ -43,7 +43,7 @@ else:
 ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
-    "athanor.herokuapp.com",
+    "athanor-26375dc9f445.herokuapp.com",
     "athanorlab.com",
     "www.athanorlab.com",
 ]
