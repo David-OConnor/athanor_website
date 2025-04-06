@@ -22,9 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DEPLOYED = True if "DATABASE_URL" in os.environ else False
 
 if DEPLOYED:
-    # todo temp
-    DEBUG = True
-    # DEBUG = False
+    DEBUG = False
     SECRET_KEY = os.environ["SECRET_KEY"]
 
     SENDGRID_KEY = os.getenv("SENDGRID_KEY")

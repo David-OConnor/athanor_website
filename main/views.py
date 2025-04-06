@@ -7,6 +7,9 @@ def home(request: HttpRequest) -> HttpResponse:
     return render(request, "index.html", {})
 
 
+def downloads(request: HttpRequest) -> HttpResponse:
+    return render(request, "downloads.html", {})
+
 # def about(request: HttpRequest) -> HttpResponse:
 #     return render(request, "about.html", {})
 

@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head_contents %}
+    <title>Athanor</title>
+{% endblock %}
+
+
+
+{% block contents %}
+    <div class="home-body">
+        <h2>Downloads</h2>
+
+        <h3>Zosimos</h3>
+        <ul>
+{#            <li><a href="{% static 'applications/zosimos_win.zip' %}">Windows</a></li>#}
+{#            <li><a href="{% static 'applications/zosimos_mac.zip' %}">Mac</a></li>#}
+{#            <li><a href="{% static 'applications/zosimos_linux.zip' %}">Linux</a></li>#}
+            <li><a href="https://github.com/David-OConnor/athanor_website/releases">Download from Github</a></li>
+        </ul>
+
+        <h3>PlasCAD</h3>
+        <ul>
+            <li><a href="https://github.com/David-OConnor/plascad/releases">Download from Github</a></li>
+        </ul>
+    </div>
+
+
+    <script>
+        document.getElementById("menu-downloads").style.color = "#F6F7EB"
+    </script>
+
+
+{% endblock %}
